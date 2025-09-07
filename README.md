@@ -19,18 +19,5 @@ Python 3.x installed.
 
 Pip, the Python package installer.
 
-Installation
-Clone this repository to your local machine:
-
-git clone [https://github.com/AHAMEDFIRAZ420/Sentiment_Analysis_LSTM.git](https://github.com/AHAMEDFIRAZ420/Sentiment_Analysis_LSTM.git)
-
-Navigate to the project directory:
-
-cd Sentiment_Analysis_LSTM
-
-Install the required packages:
-
-pip install -r requirements.txt
-
 Usage
 To use the model for sentiment prediction, run the main script and follow the instructions. The model can be fine-tuned on custom datasets to improve performance for specific domains.
