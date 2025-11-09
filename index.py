@@ -17,7 +17,7 @@ import matplotlib.pyplot as plt
 import re
 
 # --- 1. Load and Preprocess the Dataset ---
-# We'll use the top 10,000 most frequently occurring words.
+
 print("Loading IMDb dataset...")
 num_words = 10000
 (x_train, y_train), (x_test, y_test) = imdb.load_data(num_words=num_words)
@@ -36,13 +36,13 @@ print("Shape of training data after padding:", x_train.shape)
 print("Shape of testing data after padding:", x_test.shape)
 
 # --- 2. Build the Single LSTM Model ---
-# We'll use a Sequential model, which is a linear stack of layers.
+
 print("\nBuilding the single LSTM model...")
 embedding_vector_length = 64
 lstm_units = 128
 
 model = Sequential()
-# Embedding Layer: Maps integer-encoded words to dense vectors of fixed size.
+
 model.add(Embedding(input_dim=num_words, output_dim=embedding_vector_length, input_length=max_review_length))
 
 # Dropout Layer: Regularization to prevent overfitting.
@@ -65,7 +65,7 @@ print("\nTraining the model with Early Stopping...")
 epochs = 25
 batch_size = 64
 
-# Define the EarlyStopping callback
+
 early_stopping_callback = EarlyStopping(
     monitor='val_loss',
     patience=3,
